@@ -9,6 +9,7 @@ namespace Og_Guild_Bank.Models
     public class Item
     {
         public int Id { get; set; }
+        public int ItemCd { get; set; }
         public string Name { get; set; }
         public int Quality { get; set; }
         public int Quantity { get; set; }

@@ -11,5 +11,6 @@ namespace Og_Guild_Bank.ViewModels
     {
         public string Title { get; set; }
         public List<Item> Items { get; set; }
+        public List<Container> Containers { get; set; }
     }
 }

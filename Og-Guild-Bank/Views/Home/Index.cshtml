@@ -2,11 +2,18 @@
 @{
     
 }
+    <h2>@Model.Title</h2>
 @foreach (var item in Model.Items)
 {
-    <h2>@Model.Title</h2>
     <div>
         <h2>@item.Name</h2>
         <h3>@item.Quantity</h3>
+    </div>
+}
+@foreach (var container in Model.Containers)
+{
+    <div>
+        <h2>@container.ContainerId</h2>
+        <h3>@container.NumberSlots</h3>
     </div>
 }

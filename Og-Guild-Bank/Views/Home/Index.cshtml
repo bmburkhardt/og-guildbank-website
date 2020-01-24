@@ -1,0 +1,12 @@
+﻿@model Og_Guild_Bank.ViewModels.HomeViewModel
+@{
+    
+}
+@foreach (var item in Model.Items)
+{
+    <h2>@Model.Title</h2>
+    <div>
+        <h2>@item.Name</h2>
+        <h3>@item.Quantity</h3>
+    </div>
+}

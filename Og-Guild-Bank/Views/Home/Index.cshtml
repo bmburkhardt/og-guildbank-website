@@ -1,19 +1,37 @@
-﻿@model Og_Guild_Bank.ViewModels.HomeViewModel
+﻿@model HomeViewModel
 @{
-    
+
 }
-    <h2>@Model.Title</h2>
-@foreach (var item in Model.Items)
-{
-    <div>
-        <h2>@item.Name</h2>
-        <h3>@item.Quantity</h3>
-    </div>
+<h2>@Model.Title</h2>
+
+<hr />
+<textarea class="form-control" id="item-json" rows="15"></textarea>
+<button id="update-items-button" type="button" class="btn btn-primary" onclick="UpdateItems()">Update</button>
+
+@{
+    foreach (var item in Model.Items)
+    {
+        <div>
+            <h2>
+                <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id">@item.ItemName</a>
+            </h2>
+            <h3>@item.ItemQuantity</h3>
+        </div>
+    }
+    foreach (var container in Model.Containers)
+    {
+        <div>
+            <h2>@container.ContainerId</h2>
+            <h3>@container.NumberSlots</h3>
+        </div>
+    }
 }
-@foreach (var container in Model.Containers)
-{
-    <div>
-        <h2>@container.ContainerId</h2>
-        <h3>@container.NumberSlots</h3>
-    </div>
-}
+
+<script type="text/javascript">
+    function UpdateItems() {
+        var itemsJson = $('#item-json').val();
+        $.post("UpdateItems", { itemsJson: itemsJson }, function (result) {
+
+        })
+    }
+</script>

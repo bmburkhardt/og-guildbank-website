@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +22,7 @@ namespace Og_Guild_Bank.Controllers
         public IActionResult Index()
         {
 
-            var items = _itemRepository.GetAllItems().OrderBy(i => i.Name);
+            var items = _itemRepository.GetAllItems().OrderBy(i => i.ItemName);
             var containers = _containerRepository.GetAllContainers().OrderBy(c => c.ContainerId);
             var homeViewModel = new HomeViewModel()
             {
@@ -28,7 +30,35 @@ namespace Og_Guild_Bank.Controllers
                 Items = items.ToList(),
                 Containers = containers.ToList()
             };
+
             return View(homeViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var item = _itemRepository.GetItemById(id);
+            if (item == null)
+                return NotFound();
+
+            return View(item);
+        }
+
+        [Route("UpdateItems")]
+        public JsonResult UpdateItems(string itemsJson)
+        {
+            try
+            {
+                itemsJson = itemsJson.Replace("nil", "-99");
+                Bank bank = Newtonsoft.Json.JsonConvert.DeserializeObject<Bank>(itemsJson);
+            }
+            catch (Exception ex)
+            {
+                var blah = "";
+            }
+            
+            
+
+            return null;
         }
     }
 }

@@ -20,9 +20,9 @@ namespace Og_Guild_Bank.Models
             return _appDbContext.Items;
         }
 
-        public Item GetItemById(int itemId)
+        public Item GetItemById(int id)
         {
-            return _appDbContext.Items.FirstOrDefault(i => i.ItemCd == itemId);
+            return _appDbContext.Items.FirstOrDefault(i => i.Id == id);
         }
     }
 }

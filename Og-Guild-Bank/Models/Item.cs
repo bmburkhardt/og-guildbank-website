@@ -10,12 +10,12 @@ namespace Og_Guild_Bank.Models
     {
         public int Id { get; set; }
         public int ItemCd { get; set; }
-        public string Name { get; set; }
-        public int Quality { get; set; }
-        public int Quantity { get; set; }
+        public string ItemName { get; set; }
+        public int ItemQuality { get; set; }
+        public int ItemQuantity { get; set; }
         public string Image { get; set; }
-        public int BadId { get; set; }
-        public int BagSlotId { get; set; }
+        public int ContainerId { get; set; }
+        public int BagSlot { get; set; }
         
     }
 }

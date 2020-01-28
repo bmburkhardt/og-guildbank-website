@@ -9,8 +9,8 @@ using Og_Guild_Bank.Models;
 namespace Og_Guild_Bank.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200125023814_ItemModelChanged")]
-    partial class ItemModelChanged
+    [Migration("20200128030933_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,6 +58,25 @@ namespace Og_Guild_Bank.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("Og_Guild_Bank.Models.Wallet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Copper");
+
+                    b.Property<int>("Gold");
+
+                    b.Property<int>("Silver");
+
+                    b.Property<int>("TotalCopper");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Wallet");
                 });
 #pragma warning restore 612, 618
         }

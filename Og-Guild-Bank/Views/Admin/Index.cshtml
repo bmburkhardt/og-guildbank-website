@@ -1,0 +1,11 @@
+﻿<textarea class="form-control col-lg-8" id="item-json" rows="15"></textarea>
+<button id="update-items-button" type="button" class="btn btn-primary" onclick="UpdateItems()">Update</button>
+
+<script type="text/javascript">
+    function UpdateItems() {
+        var itemsJson = $('#item-json').val();
+        $.post("UpdateItems", { itemsJson: itemsJson }, function (result) {
+
+        })
+    }
+</script>

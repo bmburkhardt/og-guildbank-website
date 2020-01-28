@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Og_Guild_Bank.Models.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace Og_Guild_Bank.Models
         }
         public DbSet<Item> Items { get; set; }
         public DbSet<Container> Containers { get; set; }
+        public DbSet<Wallet> Wallet { get; set; }
+        public DbSet<ErrorLog> ErrorLog { get; set; }
     }
 }

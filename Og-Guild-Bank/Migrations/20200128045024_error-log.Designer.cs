@@ -9,8 +9,8 @@ using Og_Guild_Bank.Models;
 namespace Og_Guild_Bank.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200124054233_AddContainers")]
-    partial class AddContainers
+    [Migration("20200128045024_error-log")]
+    partial class errorlog
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,23 +41,57 @@ namespace Og_Guild_Bank.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BadId");
+                    b.Property<int>("BagSlot");
 
-                    b.Property<int>("BagSlotId");
+                    b.Property<int>("ContainerId");
 
                     b.Property<string>("Image");
 
                     b.Property<int>("ItemCd");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("ItemName");
 
-                    b.Property<int>("Quality");
+                    b.Property<int>("ItemQuality");
 
-                    b.Property<int>("Quantity");
+                    b.Property<int>("ItemQuantity");
 
                     b.HasKey("Id");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("Og_Guild_Bank.Models.Logging.ErrorLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ErrorMessage");
+
+                    b.Property<string>("LogTimestamp");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ErrorLog");
+                });
+
+            modelBuilder.Entity("Og_Guild_Bank.Models.Wallet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Copper");
+
+                    b.Property<int>("Gold");
+
+                    b.Property<int>("Silver");
+
+                    b.Property<int>("TotalCopper");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Wallet");
                 });
 #pragma warning restore 612, 618
         }

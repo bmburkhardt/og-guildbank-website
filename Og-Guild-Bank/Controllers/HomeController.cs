@@ -42,23 +42,5 @@ namespace Og_Guild_Bank.Controllers
 
             return View(item);
         }
-
-        [Route("UpdateItems")]
-        public JsonResult UpdateItems(string itemsJson)
-        {
-            try
-            {
-                itemsJson = itemsJson.Replace("nil", "-99");
-                Bank bank = Newtonsoft.Json.JsonConvert.DeserializeObject<Bank>(itemsJson);
-            }
-            catch (Exception ex)
-            {
-                var blah = "";
-            }
-            
-            
-
-            return null;
-        }
     }
 }

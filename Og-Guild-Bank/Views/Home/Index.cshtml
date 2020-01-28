@@ -3,10 +3,8 @@
 
 }
 <h2>@Model.Title</h2>
-
+<h3>All our rogues are trash - <span style="color:mediumpurple">Gio</span></h3>
 <hr />
-<textarea class="form-control" id="item-json" rows="15"></textarea>
-<button id="update-items-button" type="button" class="btn btn-primary" onclick="UpdateItems()">Update</button>
 
 @{
     foreach (var item in Model.Items)
@@ -27,11 +25,3 @@
     }
 }
 
-<script type="text/javascript">
-    function UpdateItems() {
-        var itemsJson = $('#item-json').val();
-        $.post("UpdateItems", { itemsJson: itemsJson }, function (result) {
-
-        })
-    }
-</script>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,6 +51,12 @@ namespace Og_Guild_Bank.Models
                 Wallet.CalculateCoins();
                 // **************
 
+                // ******************************
+                // Get Blizzard API Oauth token
+                // ******************************
+                BlizzardApi blizzardApi = new BlizzardApi("", "");
+                // ******************************
+
                 // *********************
                 // Update bank tables
                 // *********************
@@ -73,18 +80,21 @@ namespace Og_Guild_Bank.Models
                 }
 
                 // Items
-                command.CommandText = "insert into dbo.items(itemcd,itemname,itemquality,itemquantity,containerid,bagslot) values(@itemcd,@itemname,@itemquality,@itemquantity,@containerid,@bagslot)";
+                command.CommandText = "insert into dbo.items(itemcode,itemname,itemquality,itemquantity,containerid,bagslot,image) values(@itemcode,@itemname,@itemquality,@itemquantity,@containerid,@bagslot,@image)";
                 foreach (var item in Items)
                 {
                     command.Parameters.Clear();
-                    command.Parameters.Add(new SqlParameter("@itemcd", item.ItemCd));
+                    command.Parameters.Add(new SqlParameter("@itemcode", item.ItemCode));
                     command.Parameters.Add(new SqlParameter("@itemname", item.ItemName));
                     command.Parameters.Add(new SqlParameter("@itemquality", item.ItemQuality));
                     command.Parameters.Add(new SqlParameter("@itemquantity", item.ItemQuantity));
                     command.Parameters.Add(new SqlParameter("@containerid", item.ContainerId));
                     command.Parameters.Add(new SqlParameter("@bagslot", item.BagSlot));
+                    if (item.ItemCode != -99) command.Parameters.Add(new SqlParameter("@image", blizzardApi.GetItemImage(item.ItemCode)));
+                    else command.Parameters.Add(new SqlParameter("@image", "/Media/empty_slot.png"));
                     command.ExecuteNonQuery();
                 }
+                Debug.WriteLine("done");
                 // *********************
             }
             catch (Exception ex)

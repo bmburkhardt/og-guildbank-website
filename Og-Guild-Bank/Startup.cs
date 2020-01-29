@@ -25,7 +25,9 @@ namespace Og_Guild_Bank
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddTransient<IItemRepository, ItemRepository>().AddTransient<IContainerRepository, ContainerRepoository>();
+            services.AddTransient<IItemRepository, ItemRepository>()
+                    .AddTransient<IContainerRepository, ContainerRepoository>()
+                    .AddTransient<IWalletRepository, WalletRepository>();
             services.AddMvc();
         }
 

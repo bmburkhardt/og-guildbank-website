@@ -13,10 +13,10 @@ namespace Og_Guild_Bank.Models
             if (!context.Items.Any())
             {
                 context.AddRange(
-                    new Item { ItemCd = 13444, ItemName = "Major Mana Potion", ContainerId = 2, BagSlot = 5, ItemQuantity = 5, ItemQuality = 1 },
-                    new Item { ItemCd = 16846, ItemName = "Giantstalker's Helmet", ContainerId = 2, BagSlot = 4, ItemQuantity = 1, ItemQuality = 4 },
-                    new Item { ItemCd = 13444, ItemName = "Major Mana Potion", ContainerId = -1, BagSlot = 14, ItemQuantity = 8, ItemQuality = 0 },
-                    new Item { ItemCd = 0, ItemName = "", ContainerId = 1, BagSlot = 13, ItemQuantity = 0, ItemQuality = 0 }
+                    new Item { ItemCode = 13444, ItemName = "Major Mana Potion", ContainerId = 2, BagSlot = 5, ItemQuantity = 5, ItemQuality = 1 },
+                    new Item { ItemCode = 16846, ItemName = "Giantstalker's Helmet", ContainerId = 2, BagSlot = 4, ItemQuantity = 1, ItemQuality = 4 },
+                    new Item { ItemCode = 13444, ItemName = "Major Mana Potion", ContainerId = -1, BagSlot = 14, ItemQuantity = 8, ItemQuality = 0 },
+                    new Item { ItemCode = 0, ItemName = "", ContainerId = 1, BagSlot = 13, ItemQuantity = 0, ItemQuality = 0 }
                 );
 
                 context.SaveChanges();

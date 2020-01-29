@@ -1,5 +1,55 @@
 {
-"money":1537936,
+"money":1280586,
+"containers":[
+{
+"containerId":-1,
+"numberSlots":24,
+},
+{
+"containerId":0,
+"numberSlots":16,
+},
+{
+"containerId":1,
+"numberSlots":16,
+},
+{
+"containerId":2,
+"numberSlots":16,
+},
+{
+"containerId":3,
+"numberSlots":16,
+},
+{
+"containerId":4,
+"numberSlots":16,
+},
+{
+"containerId":5,
+"numberSlots":14,
+},
+{
+"containerId":6,
+"numberSlots":14,
+},
+{
+"containerId":7,
+"numberSlots":14,
+},
+{
+"containerId":8,
+"numberSlots":14,
+},
+{
+"containerId":9,
+"numberSlots":0,
+},
+{
+"containerId":10,
+"numberSlots":0,
+}
+],
 "items":[
 {
 "containerId":-1,
@@ -212,7 +262,7 @@
 {
 "containerId":0,
 "bagSlot":3,
-"itemQuantity":1,
+"itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Elixir of the Mongoose]",
 "itemCode":13452
@@ -252,7 +302,7 @@
 {
 "containerId":0,
 "bagSlot":8,
-"itemQuantity":1,
+"itemQuantity":3,
 "itemQuality":1,
 "itemName":"[Greater Fire Protection Potion]",
 "itemCode":13457
@@ -284,50 +334,50 @@
 {
 "containerId":0,
 "bagSlot":12,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":2,
+"itemQuality":3,
+"itemName":"[Lava Core]",
+"itemCode":17011
 },
 {
 "containerId":0,
 "bagSlot":13,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":2,
+"itemQuality":2,
+"itemName":"[Essence of Earth]",
+"itemCode":7076
 },
 {
 "containerId":0,
 "bagSlot":14,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":4,
+"itemQuality":1,
+"itemName":"[Delicate Arcanite Converter]",
+"itemCode":16006
 },
 {
 "containerId":0,
 "bagSlot":15,
-"itemQuantity":2,
-"itemQuality":0,
-"itemName":"[Lifeless Stone]",
-"itemCode":4784
+"itemQuantity":1,
+"itemQuality":1,
+"itemName":"[Thorium Tube]",
+"itemCode":16000
 },
 {
 "containerId":0,
 "bagSlot":16,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":6,
+"itemQuality":1,
+"itemName":"[Dark Iron Bar]",
+"itemCode":11371
 },
 {
 "containerId":1,
 "bagSlot":1,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":1,
+"itemQuality":0,
+"itemName":"[Brocade Shoulderpads]",
+"itemCode":1777
 },
 {
 "containerId":1,
@@ -492,7 +542,7 @@
 {
 "containerId":2,
 "bagSlot":6,
-"itemQuantity":4,
+"itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Major Mana Potion]",
 "itemCode":13444
@@ -1188,18 +1238,18 @@
 {
 "containerId":8,
 "bagSlot":3,
-"itemQuantity":1,
-"itemQuality":1,
-"itemName":"[Major Mana Potion]",
-"itemCode":13444
-},
-{
-"containerId":8,
-"bagSlot":4,
 "itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Major Healing Potion]",
 "itemCode":13446
+},
+{
+"containerId":8,
+"bagSlot":4,
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":8,

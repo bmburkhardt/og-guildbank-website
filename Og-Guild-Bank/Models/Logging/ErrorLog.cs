@@ -13,7 +13,7 @@ namespace Og_Guild_Bank.Models.Logging
         public string ErrorMessage { get; set; }
         public string LogTimestamp { get; set; }
 
-        public void InsertToLog(ref SqlConnection conn)
+        public void InsertToLog(SqlConnection conn)
         {
             Boolean newConnectionRequired = false;
             SqlCommand command = null;

@@ -26,7 +26,6 @@ namespace Og_Guild_Bank
                 try
                 {
                     var context = services.GetRequiredService<AppDbContext>();
-                    //DbInitializer.Seed(context);
                 }
                 catch (Exception ex)
                 {

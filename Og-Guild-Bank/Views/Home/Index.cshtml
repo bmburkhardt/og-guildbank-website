@@ -2,26 +2,188 @@
 @{
 
 }
-<h2>@Model.Title</h2>
-<h3>All our rogues are trash - <span style="color:mediumpurple">Gio</span></h3>
-<hr />
+<style>
+    .item-container {
+        width: 49px;
+        height: 49px;
+        margin: 2px;
+    }
 
-@{
-    foreach (var item in Model.Items)
-    {
-        <div>
-            <h2>
-                <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id">@item.ItemName</a>
-            </h2>
-            <h3>@item.ItemQuantity</h3>
-        </div>
+    .item-overlay {
+        position: relative;
+        width: 49px;
+        height: 49px;
+        bottom: 47px;
+        font-size: 22px;
+        text-align: right;
+        padding-right: 2px;
+        padding-top: 22px;
+        color: white;
+        text-shadow: 0px -1px 6px #000000;
+        font-family: Consolas;
     }
-    foreach (var container in Model.Containers)
-    {
-        <div>
-            <h2>@container.ContainerId</h2>
-            <h3>@container.NumberSlots</h3>
-        </div>
+
+    .tooltip.show {
+        opacity: 1;
     }
-}
+
+    .tooltip.in {
+        opacity: 1;
+    }
+
+    .text-0-item {
+        color: #9d9d9d !important;
+    }
+
+    .text-1-item {
+        color: #fff !important;
+    }
+
+    .text-2-item {
+        color: #1eff00 !important;
+    }
+
+    .text-3-item {
+        color: #0070dd !important;
+    }
+
+    .text-4-item {
+        color: #a335ee !important;
+    }
+
+    .text-5-item {
+        color: #ff8000 !important;
+    }
+
+    .border-0-item {
+        border: 2px solid;
+        border-color: #9d9d9d !important;
+    }
+
+    .border-1-item {
+        border: 2px solid;
+        border-color: #fff !important;
+    }
+
+    .border-2-item {
+        border: 2px solid;
+        border-color: #1eff00 !important;
+    }
+
+    .border-3-item {
+        border: 2px solid;
+        border-color: #0070dd !important;
+    }
+
+    .border-4-item {
+        border: 2px solid;
+        border-color: #a335ee !important;
+    }
+
+    .border-5-item {
+        border: 2px solid;
+        border-color: #ff8000 !important;
+    }
+</style>
+<h3><span class="font-italic">"All our rogues are trash"</span> - <span style="color:#613caf">Gio</span> 2020</h3>
+<hr />
+<div class="col-xl-8 offset-xl-2">
+    <div class="card bg-dark text-white">
+        <div class="card-header">
+
+            <div class="text-center" style="font-size: 22px;">
+                <h2>
+                    OG Guild Bank<br />
+                    @Model.Wallet.Gold<img height="20" width="20" src="~/Media/gold_coin.png" />
+                    @Model.Wallet.Silver<img height="20" width="20" src="~/Media/silver_coin.png" />
+                    @Model.Wallet.Copper<img height="20" width="20" src="~/Media/copper_coin.png" />
+                </h2>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card-deck">
+                @{
+                    for (int i = 0; i < 4; ++i)
+                    {
+                        <div class="card card-body bg-secondary col-xl-3 mb-2 shadow">
+                            <div class="d-flex flex-wrap">
+
+                                @foreach (var item in Model.ViewContainers[i].Items)
+                                {
+                                    <div class="d-flex flex-wrap item-container border-@item.ItemQuality-item">
+                                        <img class="img-fluid d-block w-100" src="@item.Image" />
+                                        @{
+                                            if (item.ItemQuantity > 0)
+                                            {
+                                                <div class="item-overlay" data-toggle="tooltip" data-placement="top" data-html="true" title="<div class=text-@item.ItemQuality-item>@item.ItemName x @item.ItemQuantity</div>">
+                                                    @if (item.ItemQuantity > 1)
+                                                    {@item.ItemQuantity}
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="card-deck">
+                @{
+                    for (int i = 4; i < 8; ++i)
+                    {
+                        <div class="card card-body bg-secondary col-xl-3 mb-2">
+                            <div class="d-flex flex-wrap">
+
+                                @foreach (var item in Model.ViewContainers[i].Items)
+                                {
+                                    <div class="d-flex flex-wrap item-container border-@item.ItemQuality-item">
+                                        <img class="img-fluid d-block w-100" src="@item.Image" />
+                                        @if (item.ItemQuantity > 0)
+                                        {
+                                            <div class="item-overlay" data-toggle="tooltip" data-placement="top" data-html="true" title="<div class=text-@item.ItemQuality-item>@item.ItemName x @item.ItemQuantity</div>">
+                                                @if (item.ItemQuantity > 1)
+                                                {@item.ItemQuantity}
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="card-deck">
+                @{
+                    for (int i = 8; i < 12; ++i)
+                    {
+                        <div class="card card-body bg-secondary col-xl-3 mb-2">
+                            <div class="d-flex flex-wrap">
+
+                                @foreach (var item in Model.ViewContainers[i].Items)
+                                {
+                                    <div class="d-flex flex-wrap item-container border-@item.ItemQuality-item">
+                                        <img class="img-fluid d-block w-100" src="@item.Image" />
+                                        @if (item.ItemQuantity > 0)
+                                        {
+                                            <div class="item-overlay" data-toggle="tooltip" data-placement="top" data-html="true" title="<div class=text-@item.ItemQuality-item>@item.ItemName x @item.ItemQuantity</div>">
+                                                @if (item.ItemQuantity > 1)
+                                                {@item.ItemQuantity}
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 

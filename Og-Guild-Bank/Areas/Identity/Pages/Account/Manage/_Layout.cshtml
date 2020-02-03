@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-8 offset-md-2">
+    <div class="card bg-dark text-white pt">
+        <div class="card-header text-center">
+            <h2>Account Management</h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <partial name="_ManageNav" />
+                </div>
+                <div class="col-md-10">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

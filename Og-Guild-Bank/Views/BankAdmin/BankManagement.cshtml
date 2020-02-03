@@ -1,0 +1,30 @@
+﻿
+<div class="col-md-4 offset-md-4">
+    <div class="card bg-dark text-white pt">
+        <div class="card-header text-center">
+            <h2>Update Guild Bank</h2>
+        </div>
+        <div class="card-body">
+            <textarea class="form-control" id="item-json" rows="25" placeholder="Paste data from addon here and click update"></textarea>
+            <button id="update-items-button" type="button" class="btn btn-primary mt-2" onclick="UpdateItems()">Update</button>
+            <div id="bank-update-status"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function UpdateItems() {
+        $('#update-items-button').attr('disabled', true).html("<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>This may take a minute...");
+        var itemsJson = $('#item-json').val();
+        $.post("/BankAdmin/UpdateItems", { itemsJson: itemsJson }, function (successful) {
+            console.log(successful);
+            if (successful) {
+                $('#bank-update-status').html("<p class=\"mb-0 text-success\">Update Successful</p>")
+            } else {
+                $('#bank-update-status').html("<p class=\"mb-0 text-danger\">Update Failed</p>")
+            }
+            $('#item-json').val("");
+            $('#update-items-button').prop('disabled', false).html("Update");
+        });
+    }
+</script>

@@ -13,6 +13,7 @@ namespace Og_Guild_Bank.Models
         public int Copper { get; set; }
         public int Silver { get; set; }
         public int Gold { get; set; }
+        public DateTime LastUpdatedTs { get; set; }
 
         public void CalculateCoins()
         {
@@ -21,6 +22,7 @@ namespace Og_Guild_Bank.Models
             Silver = TotalCopper / 100;
             TotalCopper = (TotalCopper - (Silver * 100));
             Copper = TotalCopper;
+            LastUpdatedTs = DateTime.Now;
         }
     }
 }

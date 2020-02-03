@@ -28,7 +28,7 @@ namespace Og_Guild_Bank.Models
                 // *********************
                 // Connect to database
                 // *********************
-                conn = new SqlConnection("Server=(localdb)\\MSSQLLocalDB;Database=OgGuildBank;Trusted_Connection=True;MultipleActiveResultSets=true");
+                conn = new SqlConnection("Server=tcp:og-guilddbserver.database.windows.net,1433;Initial Catalog=og-guild_db;Persist Security Info=False;User ID=;Password=;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
                 conn.Open();
                 command = new SqlCommand(null, conn);
                 // *********************
@@ -62,11 +62,12 @@ namespace Og_Guild_Bank.Models
                 // *********************
 
                 // Wallet
-                command.CommandText = "insert into dbo.wallet(totalcopper,gold,silver,copper) values(@totalcopper,@gold,@silver,@copper)";
+                command.CommandText = "insert into dbo.wallet(totalcopper,gold,silver,copper,lastupdatedts) values(@totalcopper,@gold,@silver,@copper,@lastupdatedts)";
                 command.Parameters.Add(new SqlParameter("@totalcopper", Money));
                 command.Parameters.Add(new SqlParameter("@gold", Wallet.Gold));
                 command.Parameters.Add(new SqlParameter("@silver", Wallet.Silver));
                 command.Parameters.Add(new SqlParameter("@copper", Wallet.Copper));
+                command.Parameters.Add(new SqlParameter("@LastUpdatedTs", Wallet.LastUpdatedTs));
                 command.ExecuteNonQuery();
 
                 // Containers
@@ -94,8 +95,9 @@ namespace Og_Guild_Bank.Models
                     else command.Parameters.Add(new SqlParameter("@image", "/Media/empty_slot.png"));
                     command.ExecuteNonQuery();
                 }
-                Debug.WriteLine("done");
                 // *********************
+
+                Successful = true;
             }
             catch (Exception ex)
             {

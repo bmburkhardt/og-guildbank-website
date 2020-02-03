@@ -14,38 +14,14 @@ namespace Og_Guild_Bank.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IItemRepository _itemRepository;
-        private readonly IContainerRepository _containerRepository;
-        private readonly IWalletRepository _walletRepository;
-        public HomeController(IItemRepository itemRepository, IContainerRepository containerRepository, IWalletRepository walletRepository)
+        public HomeController()
         {
-            _itemRepository = itemRepository;
-            _containerRepository = containerRepository;
-            _walletRepository = walletRepository;
+
         }
         public IActionResult Index()
         {
-            var items = _itemRepository.GetAllItems().OrderBy(i => i.ContainerId).ThenBy(i => i.BagSlot);
-            var containers = _containerRepository.GetAllContainers().OrderBy(c => c.ContainerId);
-            var wallet = _walletRepository.GetWallet();
-            var homeViewModel = new HomeViewModel()
-            {
-                Title = "OG Guild Bank",
-                Items = items.ToList(),
-                Containers = containers.ToList(),
-                Wallet = wallet
-            };
-            homeViewModel.GenerateViewContainers();
+            var homeViewModel = new HomeViewModel();
             return View(homeViewModel);
-        }
-
-        public IActionResult Details(int id)
-        {
-            var item = _itemRepository.GetItemById(id);
-            if (item == null)
-                return NotFound();
-
-            return View(item);
         }
     }
 }

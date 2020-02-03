@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Lib\" />
+    <Folder Include="wwwroot\Media\Screenshots\" />
   </ItemGroup>
 
 </Project>

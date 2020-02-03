@@ -1,5 +1,5 @@
 {
-"money":1280586,
+"money":1942999,
 "containers":[
 {
 "containerId":-1,
@@ -11,7 +11,7 @@
 },
 {
 "containerId":1,
-"numberSlots":16,
+"numberSlots":18,
 },
 {
 "containerId":2,
@@ -27,7 +27,7 @@
 },
 {
 "containerId":5,
-"numberSlots":14,
+"numberSlots":16,
 },
 {
 "containerId":6,
@@ -62,7 +62,7 @@
 {
 "containerId":-1,
 "bagSlot":2,
-"itemQuantity":9,
+"itemQuantity":10,
 "itemQuality":1,
 "itemName":"[Thorium Ore]",
 "itemCode":10620
@@ -102,26 +102,26 @@
 {
 "containerId":-1,
 "bagSlot":7,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":5,
+"itemQuality":1,
+"itemName":"[Thorium Ore]",
+"itemCode":10620
 },
 {
 "containerId":-1,
 "bagSlot":8,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":1,
+"itemQuality":2,
+"itemName":"[Arcane Crystal]",
+"itemCode":12363
 },
 {
 "containerId":-1,
 "bagSlot":9,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":12,
+"itemQuality":1,
+"itemName":"[Dense Stone]",
+"itemCode":12365
 },
 {
 "containerId":-1,
@@ -158,10 +158,10 @@
 {
 "containerId":-1,
 "bagSlot":14,
-"itemQuantity":8,
-"itemQuality":1,
-"itemName":"[Dense Stone]",
-"itemCode":12365
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":-1,
@@ -198,10 +198,10 @@
 {
 "containerId":-1,
 "bagSlot":19,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":1,
+"itemQuality":1,
+"itemName":"[Thawpelt Sack]",
+"itemCode":9587
 },
 {
 "containerId":-1,
@@ -246,7 +246,7 @@
 {
 "containerId":0,
 "bagSlot":1,
-"itemQuantity":3,
+"itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Grilled Squid]",
 "itemCode":13928
@@ -262,7 +262,7 @@
 {
 "containerId":0,
 "bagSlot":3,
-"itemQuantity":5,
+"itemQuantity":3,
 "itemQuality":1,
 "itemName":"[Elixir of the Mongoose]",
 "itemCode":13452
@@ -294,7 +294,7 @@
 {
 "containerId":0,
 "bagSlot":7,
-"itemQuantity":6,
+"itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Large Seaforium Charge]",
 "itemCode":4398
@@ -302,7 +302,7 @@
 {
 "containerId":0,
 "bagSlot":8,
-"itemQuantity":3,
+"itemQuantity":2,
 "itemQuality":1,
 "itemName":"[Greater Fire Protection Potion]",
 "itemCode":13457
@@ -310,7 +310,7 @@
 {
 "containerId":0,
 "bagSlot":9,
-"itemQuantity":1,
+"itemQuantity":2,
 "itemQuality":2,
 "itemName":"[Warsong Gulch Mark of Honor]",
 "itemCode":20558
@@ -318,7 +318,7 @@
 {
 "containerId":0,
 "bagSlot":10,
-"itemQuantity":20,
+"itemQuantity":15,
 "itemQuality":2,
 "itemName":"[Alterac Valley Mark of Honor]",
 "itemCode":20560
@@ -326,7 +326,7 @@
 {
 "containerId":0,
 "bagSlot":11,
-"itemQuantity":9,
+"itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Snowball]",
 "itemCode":17202
@@ -334,50 +334,50 @@
 {
 "containerId":0,
 "bagSlot":12,
-"itemQuantity":2,
-"itemQuality":3,
-"itemName":"[Lava Core]",
-"itemCode":17011
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":0,
 "bagSlot":13,
-"itemQuantity":2,
-"itemQuality":2,
-"itemName":"[Essence of Earth]",
-"itemCode":7076
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":0,
 "bagSlot":14,
-"itemQuantity":4,
-"itemQuality":1,
-"itemName":"[Delicate Arcanite Converter]",
-"itemCode":16006
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":0,
 "bagSlot":15,
-"itemQuantity":1,
-"itemQuality":1,
-"itemName":"[Thorium Tube]",
-"itemCode":16000
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":0,
 "bagSlot":16,
-"itemQuantity":6,
-"itemQuality":1,
-"itemName":"[Dark Iron Bar]",
-"itemCode":11371
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":1,
 "bagSlot":1,
-"itemQuantity":1,
-"itemQuality":0,
-"itemName":"[Brocade Shoulderpads]",
-"itemCode":1777
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":1,
@@ -500,41 +500,57 @@
 "itemCode":nil
 },
 {
+"containerId":1,
+"bagSlot":17,
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
+},
+{
+"containerId":1,
+"bagSlot":18,
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
+},
+{
 "containerId":2,
 "bagSlot":1,
 "itemQuantity":1,
-"itemQuality":4,
-"itemName":"[Lok'delar, Stave of the Ancient Keepers]",
-"itemCode":18715
+"itemQuality":3,
+"itemName":"[Barbarous Blade]",
+"itemCode":18520
 },
 {
 "containerId":2,
 "bagSlot":2,
 "itemQuantity":1,
 "itemQuality":3,
-"itemName":"[Insignia of the Alliance]",
-"itemCode":18856
+"itemName":"[Royal Seal of Eldre'Thalas]",
+"itemCode":18473
 },
 {
 "containerId":2,
 "bagSlot":3,
 "itemQuantity":1,
 "itemQuality":4,
-"itemName":"[Giantstalker's Leggings]",
-"itemCode":16847
+"itemName":"[Dragonstalker's Legguards]",
+"itemCode":16938
 },
 {
 "containerId":2,
 "bagSlot":4,
 "itemQuantity":1,
 "itemQuality":4,
-"itemName":"[Giantstalker's Helmet]",
-"itemCode":16846
+"itemName":"[Dragonstalker's Helm]",
+"itemCode":16939
 },
 {
 "containerId":2,
 "bagSlot":5,
-"itemQuantity":4,
+"itemQuantity":5,
 "itemQuality":1,
 "itemName":"[Major Healing Potion]",
 "itemCode":13446
@@ -558,7 +574,7 @@
 {
 "containerId":2,
 "bagSlot":8,
-"itemQuantity":20,
+"itemQuantity":13,
 "itemQuality":1,
 "itemName":"[Runecloth]",
 "itemCode":14047
@@ -574,10 +590,10 @@
 {
 "containerId":2,
 "bagSlot":10,
-"itemQuantity":15,
-"itemQuality":1,
-"itemName":"[Runecloth]",
-"itemCode":14047
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":2,
@@ -646,14 +662,6 @@
 {
 "containerId":3,
 "bagSlot":3,
-"itemQuantity":4,
-"itemQuality":1,
-"itemName":"[Roasted Quail]",
-"itemCode":8952
-},
-{
-"containerId":3,
-"bagSlot":4,
 "itemQuantity":20,
 "itemQuality":1,
 "itemName":"[Roasted Quail]",
@@ -661,8 +669,16 @@
 },
 {
 "containerId":3,
+"bagSlot":4,
+"itemQuantity":10,
+"itemQuality":1,
+"itemName":"[Roasted Quail]",
+"itemCode":8952
+},
+{
+"containerId":3,
 "bagSlot":5,
-"itemQuantity":5,
+"itemQuantity":15,
 "itemQuality":1,
 "itemName":"[Heavy Runecloth Bandage]",
 "itemCode":14530
@@ -678,7 +694,7 @@
 {
 "containerId":3,
 "bagSlot":7,
-"itemQuantity":16,
+"itemQuantity":10,
 "itemQuality":1,
 "itemName":"[Morning Glory Dew]",
 "itemCode":8766
@@ -774,87 +790,87 @@
 {
 "containerId":4,
 "bagSlot":3,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":153,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":4,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":5,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":6,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":7,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":8,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":9,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":10,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":11,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":12,
-"itemQuantity":nil,
-"itemQuality":nil,
-"itemName":"nil",
-"itemCode":nil
+"itemQuantity":200,
+"itemQuality":1,
+"itemName":"[Jagged Arrow]",
+"itemCode":11285
 },
 {
 "containerId":4,
 "bagSlot":13,
-"itemQuantity":199,
+"itemQuantity":200,
 "itemQuality":1,
 "itemName":"[Jagged Arrow]",
 "itemCode":11285
@@ -996,9 +1012,25 @@
 "itemCode":8410
 },
 {
+"containerId":5,
+"bagSlot":15,
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
+},
+{
+"containerId":5,
+"bagSlot":16,
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
+},
+{
 "containerId":6,
 "bagSlot":1,
-"itemQuantity":7,
+"itemQuantity":5,
 "itemQuality":2,
 "itemName":"[Greater Nether Essence]",
 "itemCode":11175
@@ -1062,10 +1094,10 @@
 {
 "containerId":6,
 "bagSlot":9,
-"itemQuantity":1,
-"itemQuality":3,
-"itemName":"[Large Radiant Shard]",
-"itemCode":11178
+"itemQuantity":nil,
+"itemQuality":nil,
+"itemName":"nil",
+"itemCode":nil
 },
 {
 "containerId":6,
@@ -1230,7 +1262,7 @@
 {
 "containerId":8,
 "bagSlot":2,
-"itemQuantity":5,
+"itemQuantity":1,
 "itemQuality":1,
 "itemName":"[Major Mana Potion]",
 "itemCode":13444
@@ -1238,7 +1270,7 @@
 {
 "containerId":8,
 "bagSlot":3,
-"itemQuantity":5,
+"itemQuantity":3,
 "itemQuality":1,
 "itemName":"[Major Healing Potion]",
 "itemCode":13446

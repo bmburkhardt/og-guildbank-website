@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -6,29 +9,44 @@
     <title>@ViewBag.Title</title>
     <link asp-append-version="true" href="~/Lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link asp-append-version="true" href="~/Content/site.css" rel="stylesheet" />
+    <link asp-append-version="true" href="~/Content/floating-labels.css" rel="stylesheet" />
     <script asp-append-version="true" src="~/Lib/popper.js/umd/popper.min.js"></script>
     <script asp-append-version="true" src="~/Lib/jquery/jquery.min.js"></script>
     <script asp-append-version="true" src="~/Lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>var whTooltips = { colorLinks: false, iconizeLinks: false, renameLinks: false };</script>
+    <script src="https://wow.zamimg.com/widgets/power.js"></script>
 </head>
-<body>
+<body style="overflow-y: scroll;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" asp-controller="Home" asp-action="Index">OG Guild</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Console</a>
+                    <a class="nav-link" asp-controller="Bank" asp-action="Index">Bank</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://og-loot-bot.firebaseapp.com/" target="_blank">Hellz' Loot Log</a>
+                </li>
+                @*<li class="nav-item">
+                    <a class="nav-link" asp-controller="Application" asp-action="Application">Apply</a>
+                </li>*@
             </ul>
+            <span class="navbar-text"><partial name="_LoginPartial" /></span>
         </div>
     </nav>
-    <div class="bg-secondary">
+    <div class="bg-secondary pb-3 pt-5" style="min-height: calc(100vh - 119px)">
         @RenderBody()
     </div>
+    @RenderSection("Scripts", required: false)
+    <hr class="my-0 bg-dark" />
+    <footer class="bg-dark text-white">
+        <p class="text-center my-0">Created by: DrizzyDraxy<br />OG Guild - Kurinnaxx</p>
+    </footer>
 </body>
 </html>
